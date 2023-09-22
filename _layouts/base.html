@@ -1,0 +1,50 @@
+---
+# base from https://www.matuzo.at/blog/html-boilerplate/
+layout: none
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ page.title }} - Wearing Sound Projects</title>
+
+    <script type="module">
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+
+    <meta name="description" content="Page description">
+    <meta property="og:title" content="Unique page title - My Site">
+    <meta property="og:description" content="Page description">
+    <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
+    <meta property="og:image:alt" content="Image description">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://www.mywebsite.com/page">
+    <link rel="canonical" href="https://www.mywebsite.com/page">
+
+    <link rel="icon" href="{{site.baseurl}}/assets/favicon.ico">
+    <link rel="apple-touch-icon" href="{{site.baseurl}}/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/my.webmanifest">
+    <meta name="theme-color" content="#FF00FF">
+</head>
+
+<body>
+    <div class="root" data-is-touch="false">
+        {{ content }}
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="{{ site.baseurl }}/assets/js/main.js"></script>
+</body>
+
+
+</html>

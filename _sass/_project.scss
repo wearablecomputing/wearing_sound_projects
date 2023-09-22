@@ -1,0 +1,84 @@
+.project {
+  &__title-container {
+    margin-top: var(--header-height);
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: var(--font-weight-regular);
+  }
+  
+  &__group {
+    font-style: italic;
+    font-weight: var(--font-weight-light);
+  }
+
+  &__heading {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-top: 1.5em;
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__description {
+    width: 100%;
+    margin-bottom: 5rem;
+    
+    @media(min-width: $desktop) {
+      width: 50%;
+    }
+
+    h2 {
+      text-decoration: underline;
+      font-weight: var(--font-weight-regular);
+      text-decoration: none;
+      font-size: 16px;
+      margin-bottom: 1em;
+      margin-top: 2em;
+
+      @media (min-width: $tablet) {
+          font-size: 19px;
+      }
+      
+      @media (min-width: $desktop) {
+          font-size: 1.75vw;
+      }
+
+      @media (min-width: 1500px) {
+          font-size: 1.25vw;
+      }
+    }
+  }
+
+  &__sound-gallery {
+    margin-bottom: 2rem;
+
+    audio {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    @media (min-width: $tablet) {
+      width: 66%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 50%;
+    }
+  }
+
+  &__video-gallery {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+body {
+  padding: var(--body-padding);
+  background-color: var(--background-color);
+  margin-top: 10vh;
+  
+  @media (min-width: $tablet) {
+    margin-top: 15vh;
+  }
+}

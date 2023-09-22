@@ -1,0 +1,14 @@
+<header class="header">
+	<div class="header__inner">
+		<div class="header__logo-container txt-m"><a href="{{ site.baseurl }}/">Wearing Sound</a></div>
+        {% if title %}
+        <div class="header__title-container">
+            <h1 class="header__title txt-m">{{ title }}</h1>
+            <h3 class="header__group txt-m">{{ group }}</h3>
+        </div>
+        {% endif %}
+		<nav class="header__about-container txt-m">
+			<a href="{{ site.baseurl }}/about/" class="link-about">About</a>
+		</nav>
+	</div>
+</header>

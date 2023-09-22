@@ -1,0 +1,88 @@
+---
+# base from https://www.matuzo.at/blog/html-boilerplate/
+layout: base
+---
+
+{% include header.html %}
+<h1 class="archive__title txt-xl">Wearing Sound Projects</h1>
+<h4 class="archive__subtitle txt-xl">Product & Fashion Design | UdK Berlin</h4>
+
+<div class="archive__term-container">
+  <h3 class="archive__term-title txt-xl">2022/2023</h3>
+  <ul>
+    {% for post in site.posts %} {% if post.path contains '2023-01-01' %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        <div class="archive__project">
+          <div class="archive__project-image">
+            {% for file in site.static_files %} {% if file.path contains
+            'archive' and file.path contains post.slug and file.path contains
+            'medium' and file.name contains "title_img" %} {% if file.extname ==
+            '.webp' %}
+            <picture>
+              <source
+                srcset="{{ site.mediaurl }}{{ file.path }}"
+                type="image/webp"
+                alt="Title image of {{ post.group }}: {{ post.title }}"
+              />
+              <img
+                src="{{ site.mediaurl }}{{ file.path | replace: 'webp', 'jpg' }}"
+                alt="Title image of {{ post.group }}: {{ post.title }}"
+              />
+              <img
+                src="{{ site.mediaurl }}{{ file.path | replace: 'webp', 'jpg' }}"
+                alt="Title image of {{ post.group }}: {{ post.title }}"
+              />
+            </picture>
+            {% endif %} {% endif %} {% endfor %}
+          </div>
+          <div class="archive__project-title-container">
+            <h3 class="archive__project-title txt-l">{{ post.title }}</h3>
+            <h4 class="archive__project-group txt-l">{{ post.group }}</h4>
+          </div>
+        </div>
+      </a>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>
+
+<div class="archive__term-container">
+  <h3 class="archive__term-title txt-xl">2021/2022</h3>
+  <ul>
+    {% for post in site.posts %} {% if post.path contains '2022-01-01' %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        <div class="archive__project">
+          <div class="archive__project-image">
+            {% for file in site.static_files %} {% if file.path contains
+            'archive' and file.path contains post.slug and file.path contains
+            'medium' and file.name contains "title_img" %} {% if file.extname ==
+            '.webp' %}
+            <picture>
+              <source
+                srcset="{{ site.mediaurl }}{{ file.path }}"
+                type="image/webp"
+                alt="Title image of {{ post.group }}: {{ post.title }}"
+              />
+              <img
+                src="{{ site.mediaurl }}{{ file.pat | replace: 'webp', 'jpg'h }}"
+                alt="Title image of {{ post.group }}: {{ post.title }}"
+              />
+              <img
+                src="{{ site.mediaurl }}{{ file.path | replace: 'webp', 'jpg' }}"
+                alt="Title image of {{ post.group }}: {{ post.title }}"
+              />
+            </picture>
+            {% endif %} {% endif %} {% endfor %}
+          </div>
+          <div class="archive__project-title-container">
+            <h3 class="archive__project-title txt-l">{{ post.title }}</h3>
+            <h4 class="archive__project-group txt-l">{{ post.group }}</h4>
+          </div>
+        </div>
+      </a>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>

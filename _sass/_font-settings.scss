@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,600;1,300&family=Space+Grotesk:wght@600&display=swap');
+
+:root {
+  color: var(--color);
+  font-family: 'Avenir Next', Arial, sans-serif;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+
+  @media (min-width: 750px) {
+    --font-size: 16px;
+  }
+}
+
+p {
+  margin-top: 0;
+  text-align: justify;
+  line-height: 1.33;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.txt-xl, .txt-l, .txt-m {
+  font-size: 16px;
+}
+
+@media (min-width: $tablet) {
+  .txt-xl, .txt-l, .txt-m {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .txt-l {
+    font-size: 1.75vw;
+  }
+
+  .txt-m {
+    font-size: 1.5vw;
+    line-height: calc(var(--bu) * 2);
+  }
+
+  .txt-xl {
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  .txt-l {
+    font-size: 1.25vw;
+  }
+
+  .txt-m {
+    font-size: 1.0vw;
+    line-height: calc(var(--bu) * 2);
+  }
+
+  .txt-xl {
+    font-size: 2.0vw;
+  }
+}

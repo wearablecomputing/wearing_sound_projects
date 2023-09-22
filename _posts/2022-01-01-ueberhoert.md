@@ -1,0 +1,18 @@
+---
+layout: project
+title: "Überhört"
+group: "Louisa Fortwengel, Denise Kipke"
+video-embed: [<iframe title="ueberhoert video" src="https://stream.udk-berlin.de/videos/embed/4c845bbc-9220-44c9-8838-d353f32dd9a1" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>]
+---
+
+Between the rhythm of changing tasks, locations and interactions, moments of waiting and presence often get lost in translation between the upbeat of the future and replaying the past. Überhört aims to make the mind and body explore those in between moments, gain attentive perception of the now, and meditate on the experience of chaos until stillness arises.We crea- ted a non-descript, knitted, gray pullover with discreetly incorporated piezoresistive yarn. It
+is simple and easy fitting.The color is the metaphorical translation of the play on words of the gray mouse (graue Maus) - of something that is rather standing back than standing out - so is the silhouette of the sweater in interplay with its material use and grayish color.
+
+After getting familiar with sensors (p.1, p.2), the Arduino Uno (p. 2-4) and Max MSP (p. 4), different concepts were discussed. First, the focus laid on the interaction between two humans, and then settled on the interaction with oneself (p. 5).What evolved was the aim of sound gui- ding the body through movements, and in turn nudging the mind to focus on one thing at a time (p .5).The pullover therefore works like a second layer of skin, made of soft, thin double-thread yarn, with incorporated piezoresistive yarn at the elbows, hands, neckline and upper back (p.6-11, p.15). It detects the movements of the body and allows to translate the experience into sensual, immersive moments. Self-made cables, made of conductive thread and covered by paracord, transmitted the data from the piezoresistive, pressure and stretch sensitive, areas to the Arduino Uno and Max msp software (p.10, p.12-14).
+
+Just like the pullover, the trained movements (e.g. stretching the arms up high, grabbing one‘s elbows or the neckline; sound 1) and the recorded sounds (e.g. turning on a gas stove, the jingling of keys, or subway doors closing; sound 2) were of everyday quality. All usually get lost in the daily. Likewise, a sequence of conscious waiting was recorded (sound 3).
+
+The sounds were embedded in three phases (p.16). Phase one, the still standing body creates an uncontrolled chaos sound, a mixtape from the simple sound and other recordings (p. 17; patch #4, sound 1). If the upper body moves deliberately in one position, one simple sound can be clearly identified (p. 18; patch #9 sound 2). If one gets back to and remains in the standing position for 60 seconds or more, one reaches the meditative state - the sound of waiting (sound 3) is played, and the chaos is stopped (p.19; patch #7; sound 3), whereby each inter- ruption causes the sound to swing back into chaos.
+
+In total, data from six sensor areas was incorporated in a max patch that connected the Gim- let Machine learning patch with a combination of value threshold measurement and movement detection (patch #1-9).
+In learning about the material, recording the sounds ourselves and connecting the seeming- ly normal, but invisibly different pullover to the act of observation and stillness, associative moments were created and captured in the process (p. 21-23).The act of creating überhört shaped, for a brief moment, our own perception of the in between.

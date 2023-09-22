@@ -1,0 +1,27 @@
+.DS_Store
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+node_modules
+archive/.DS_Store
+assets/.DS_Store
+.DS_Store
+Gemfile.lock
+
+# Image Folders
+archive/*/*/Images/*
+!archive/*/*/Images/large
+!archive/*/*/Images/medium
+!archive/*/*/Images/thumbnail
+
+# Media File Types
+*.mov
+*.mp4
+*.wav
+*.flac
+*.aiff
+
+# BFG Repo Cleaner
+bfg-*.jar

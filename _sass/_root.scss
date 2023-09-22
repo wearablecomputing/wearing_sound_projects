@@ -1,0 +1,28 @@
+$tablet: 750px;
+$desktop: 1024px;
+$header-padding-top: 12px;
+$header-padding-bottom: 12px;
+$header-background-mobile: rgba(255, 255, 255, 0.9);
+$header-border-bottom-color: rgb(187, 187, 187);
+
+@media (min-width: $tablet) {
+  $header-height: 80px; 
+}
+
+:root {
+  margin-left: auto;
+  margin-right: auto;
+  --body-padding: 10px;
+  --negative-body-padding: -10px;
+  --background-color: #F2F2F2;
+  --color: rgb(10, 0, 49);
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --heider-height: 40px;
+  
+  @media (min-width: $tablet) {
+    --heider-height: 80px;
+    --body-padding: 15px;
+    --negative-body-padding: -15px;
+  }
+}

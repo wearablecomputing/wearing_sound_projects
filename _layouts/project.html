@@ -1,0 +1,140 @@
+---
+layout: base
+---
+
+<!-- Assignment neccessary, Jekyll somehow has problems with page.-prefix -->
+{% assign title = page.title %}
+{% assign group = page.group %}
+{% include header.html %}
+
+<div class="project__title-container">
+    <h3 class="project__title txt-m">{{ title }}</h3>
+    <h3 class="project__group txt-m">{{ group }}</h3>
+    <h3 class="project__year txt-m">{{ year }}</h3>
+</div>
+
+<!-- https://jekyllrb.com/docs/static-files/ -->
+<!-- https://jekyllrb.com/docs/structure/ -->
+
+<h3 class="project__heading txt-l">Description</h3>
+<div class="project__description txt-l">
+    {{ content }}
+</div>
+
+<h3 class="project__heading txt-l">Recordings</h3>
+<section class="project__sound-gallery">
+    {% for file in site.static_files %}
+    {% if file.path contains 'archive' and file.path contains page.slug and file.path contains "Audio"  %}
+    {% if file.extname == '.mp3' %}
+    <div class="project__sound-container">
+        <audio
+        controls
+        src="{{ site.mediaurl }}{{ file.path }}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</section>
+
+{%- capture document_buffer -%}
+    {% assign documents = false %}
+    {% for file in site.static_files %}
+    {% if file.path contains 'archive' and file.path contains page.slug %}
+    {% if file.extname == '.pdf' %}
+        {% assign documents = true %}
+        <div class="project__pdf-container">
+            <p><a href="{{ site.mediaurl }}{{ file.path }}">{{ file.name }}</a></p>
+        </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+{%- endcapture -%}
+{% if documents %}
+<h3 class="project__heading txt-l">PDFs</h3>
+<section class="project__pdf-gallery">
+    {{ document_buffer }}
+</section>
+{% endif %}
+
+{%- capture max_buffer -%}
+    {% assign max_files = false %}
+    {% for file in site.static_files %}
+    {% if file.path contains 'archive' and file.path contains page.slug %}
+    {% if file.extname == '.maxpat' %}
+        {% assign documents = true %}
+        <div class="project__file-container">
+            <p><a href="{{ site.mediaurl }}{{ file.path }}">{{ file.name }}</a></p>
+        </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+{%- endcapture -%}
+{% if max_files %}
+<h3 class="project__heading txt-l">Max/MSP Files</h3>
+<section class="project__file-gallery">
+    {{ max_buffer }}
+</section>
+{% endif %}
+
+{% if page.video-embed %}
+<h3 class="project__heading txt-l">Videos</h3>
+<section class="project__video-gallery">
+    {% for video in page.video-embed %}
+    {{ video }}
+    {% endfor %}
+</section>
+{% endif %}
+
+{% assign index = 1 %}
+<h3 class="project__heading txt-l">Images</h3>
+<section class="thumbnail-gallery">
+    {% for file in site.static_files %}
+    {% if file.path contains 'archive' and file.path contains page.slug and file.path contains "thumbnail"  %}
+    {% if file.extname == '.webp' %}
+    <div class="thumbnail-gallery__image-container js-slideshow-thumbnail" data-index="{{index}}">
+        <picture>
+            <source srcset="{{ site.mediaurl }}{{ file.path }}" type="image/webp" alt="{{ page.title }} : {{ file.name }}" />
+            <img src="{{ site.mediaurl }}{{ file.path | replace: 'webp', 'jpg' }}" alt="{{ page.title }} : {{ file.name }}" />
+        </picture>
+    </div>
+    {% assign index = index | plus: 1 %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</section>
+
+<div class="slideshow__container">
+    <button aria-label="Close" class="slideshow__close js-slideshow-close-button">X</button>
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            {% for file in site.static_files %}
+            {% if file.path contains 'archive' and file.path contains page.slug and file.path contains "large" %}
+            {% unless file.path contains "thumbnails" %}
+            {% if file.extname == '.webp' %}
+            <div class="swiper-slide slideshow__slide">
+                <picture>
+                    <source data-srcset="{{ site.mediaurl }}{{ file.path }}" type="image/webp" alt="{{ file.path }}" class="swiper-lazy" />
+                    <img data-src="{{ site.mediaurl }}{{ file.path | replace: 'webp', 'jpg' }}" alt="{{ file.path }}" class="swiper-lazy" />
+                </picture>
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            {% endif %}
+            {% endunless %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
