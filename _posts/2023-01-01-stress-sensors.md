@@ -2,10 +2,10 @@
 layout: project
 title: "stress sensors"
 group: "Athena Grandis"
-# video-embed:
-#   [
-#     <iframe title="ueberhoert video" src="https://stream.udk-berlin.de/videos/embed/4c845bbc-9220-44c9-8838-d353f32dd9a1" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>,
-#   ]
+video-embed:
+  [
+    <iframe title="Athena Grandis - stress sensors (seminar work for &quot;Wearing Sound&quot; WiSe 22/23)" width="560" height="315" src="https://stream.udk-berlin.de/videos/embed/a276d631-56d1-4f28-96a6-b23f64753805" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>,
+  ]
 ---
 
 stress sensors are four sensors located on the body, in places that I touch when I am stressed. These scratching and massaging movements on the ear, back, chest and thumb are measured by receptive sensors and transferred into sound. Thus, small movements that I make every day but do not notice are brought to consciousness.

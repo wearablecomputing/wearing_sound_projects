@@ -2,10 +2,13 @@
 layout: project
 title: "Piano Gloves"
 group: "Hao Xu, Yuhang Han"
-# video-embed:
-#   [
-#     <iframe title="ueberhoert video" src="https://stream.udk-berlin.de/videos/embed/4c845bbc-9220-44c9-8838-d353f32dd9a1" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>,
-#   ]
+video-embed:
+  [
+    <iframe title="Hao Xu,
+    Yuhang Han - Piano Gloves (seminar work for &quot;Wearing Sound&quot;) - part 2" width="560" height="315" src="https://stream.udk-berlin.de/videos/embed/014ba252-89ae-4b18-9497-963d78b7a769" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>,
+    <iframe title="Hao Xu,
+    Yuhang Han - Piano Gloves (seminar work for &quot;Wearing Sound&quot;) - part 2" width="560" height="315" src="https://stream.udk-berlin.de/videos/embed/aec32ae3-148c-4d7c-9c3a-c6d29a629416" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>,
+  ]
 ---
 
 With the popularity of smart terminals, wearable electronic devices present a
